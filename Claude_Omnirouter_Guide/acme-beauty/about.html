@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Acme Beauty</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✓</div>
+        <span>Acme Beauty</span>
+      </a>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" placeholder="Search products..." id="headerSearch">
+          <span style="color: var(--secondary-text);">🔍</span>
+        </div>
+
+        <div class="cart-icon-wrapper" onclick="window.location.href='cart.html'">
+          <span class="cart-icon">🛍️</span>
+          <div class="cart-count">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section" style="background-color: var(--very-light-pink); text-align: center;">
+    <div class="container">
+      <h1 style="margin-bottom: var(--spacing-lg);">Beauty Begins With Care</h1>
+      <p style="font-size: 1.05rem; color: var(--secondary-text); max-width: 600px; margin: 0 auto;">
+        Discover the story behind Acme Beauty and our belief in simple, thoughtful self-care.
+      </p>
+    </div>
+  </section>
+
+  <!-- Brand Image -->
+  <section class="section">
+    <div class="container">
+      <div style="width: 100%; border-radius: var(--radius-lg); overflow: hidden; background: linear-gradient(135deg, var(--soft-pink), var(--very-light-pink)); min-height: 400px; display: flex; align-items: center; justify-content: center;">
+        <img src="assets/images/brand-story.svg" alt="Acme Beauty Brand" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML = '<div style=\"padding: var(--spacing-lg); text-align: center; color: var(--secondary-text); width: 100%;\"><div style=\"font-size: 3rem; margin-bottom: var(--spacing-md);\">💆</div><p>Our Beauty Story</p></div>'">
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Story -->
+  <section class="section section-pink">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--spacing-2xl);">
+        <h2>Our Story</h2>
+        <p style="max-width: 800px; margin: var(--spacing-lg) auto 0 auto; font-size: 1.05rem;">
+          Acme Beauty was created with a simple belief: that everyday beauty routines should feel simple, thoughtful, and personal. We curate a collection of carefully selected skincare essentials designed to complement your self-care moments.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="gap: var(--spacing-2xl); margin-bottom: var(--spacing-2xl);">
+        <!-- Mission -->
+        <div style="background-color: var(--very-light-pink); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <h3 style="margin-bottom: var(--spacing-lg); text-align: center;">Our Mission</h3>
+          <p style="text-align: center; color: var(--secondary-text);">
+            Make everyday beauty routines feel simple, accessible, and enjoyable for everyone who believes in the power of thoughtful self-care.
+          </p>
+        </div>
+
+        <!-- Vision -->
+        <div style="background-color: var(--soft-pink); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <h3 style="margin-bottom: var(--spacing-lg); text-align: center;">Our Vision</h3>
+          <p style="text-align: center; color: var(--secondary-text);">
+            Create a welcoming beauty destination where everyone can discover products that fit their personal routine and feel confident in their choices.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Values -->
+  <section class="section section-very-light">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: var(--spacing-2xl);">Our Values</h2>
+
+      <div class="grid grid-4">
+        <!-- Value 1 -->
+        <div style="background-color: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">✓</div>
+          <h4 style="margin-bottom: var(--spacing-md);">Thoughtful Selection</h4>
+          <p style="font-size: 0.95rem; color: var(--secondary-text);">Every product is carefully chosen to meet our standards of quality and effectiveness.</p>
+        </div>
+
+        <!-- Value 2 -->
+        <div style="background-color: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">💆</div>
+          <h4 style="margin-bottom: var(--spacing-md);">Everyday Self-Care</h4>
+          <p style="font-size: 0.95rem; color: var(--secondary-text);">We believe beauty rituals should be a moment of joy in your daily routine.</p>
+        </div>
+
+        <!-- Value 3 -->
+        <div style="background-color: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">⭐</div>
+          <h4 style="margin-bottom: var(--spacing-md);">Quality-Focused Design</h4>
+          <p style="font-size: 0.95rem; color: var(--secondary-text);">Premium ingredients and thoughtful formulations matter to us.</p>
+        </div>
+
+        <!-- Value 4 -->
+        <div style="background-color: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">❤️</div>
+          <h4 style="margin-bottom: var(--spacing-md);">Customer First</h4>
+          <p style="font-size: 0.95rem; color: var(--secondary-text);">Your satisfaction and experience are at the heart of everything we do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section section-pink">
+    <div class="container" style="text-align: center;">
+      <h2 style="margin-bottom: var(--spacing-lg);">Find Your Everyday Essentials</h2>
+      <p style="font-size: 1.05rem; color: var(--secondary-text); max-width: 600px; margin: 0 auto var(--spacing-lg) auto;">
+        Explore our collection and discover the products that make your daily routine feel special.
+      </p>
+      <a href="shop.html" class="btn btn-primary">Explore the Shop</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+            <div class="logo-icon">✓</div>
+            <span>Acme Beauty</span>
+          </a>
+          <p>Premium skincare and beauty essentials for everyday self-care.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Shipping Info</a></li>
+            <li><a href="contact.html">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: var(--spacing-md);">Follow Us</h4>
+          <div class="social-icons">
+            <div class="social-icon">f</div>
+            <div class="social-icon">𝕏</div>
+            <div class="social-icon">📷</div>
+            <div class="social-icon">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <p>&copy; 2026 Acme Beauty. All rights reserved. This is a demo website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>

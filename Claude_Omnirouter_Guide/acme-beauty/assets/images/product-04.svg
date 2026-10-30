@@ -1,0 +1,22 @@
+<svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#F9E5E0"/><stop offset="100%" style="stop-color:#FFF7F6"/></linearGradient></defs>
+  <rect width="400" height="500" fill="url(#bg4)"/>
+  <circle cx="100" cy="150" r="60" fill="#FCE8E3" opacity="0.7"/>
+  <circle cx="300" cy="300" r="80" fill="#FCE8E3" opacity="0.5"/>
+
+  <!-- Cleanser bottle (pump dispenser) -->
+  <rect x="140" y="120" width="120" height="160" rx="10" fill="#F0C1CC"/>
+  <rect x="170" y="100" width="60" height="25" rx="5" fill="#E8A5A5"/>
+  <rect x="180" y="85" width="40" height="20" rx="3" fill="#D68B99"/>
+  <rect x="185" y="75" width="30" height="12" fill="#C97AA8"/>
+
+  <!-- Foam texture inside -->
+  <circle cx="160" cy="180" r="15" fill="white" opacity="0.4"/>
+  <circle cx="200" cy="190" r="12" fill="white" opacity="0.35"/>
+  <circle cx="230" cy="175" r="14" fill="white" opacity="0.3"/>
+
+  <text x="200" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#252525">Gentle</text>
+  <text x="200" y="335" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#252525">Foaming Cleanser</text>
+  <text x="200" y="390" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#F58D96" font-weight="bold">Cleanser</text>
+  <text x="200" y="455" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#F58D96">★★★★☆</text>
+</svg>

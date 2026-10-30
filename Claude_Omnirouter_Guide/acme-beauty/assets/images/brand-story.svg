@@ -1,0 +1,52 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="storyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF7F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FCE8E3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F9E5E0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#storyBg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="150" cy="100" r="80" fill="#FCE8E3" opacity="0.6"/>
+  <circle cx="700" cy="400" r="100" fill="#FCE8E3" opacity="0.5"/>
+
+  <!-- Main illustration (skincare routine representation) -->
+  <g transform="translate(400, 250)">
+    <!-- Morning skincare products arrangement -->
+
+    <!-- Cleanser bottle (left) -->
+    <rect x="-140" y="-40" width="60" height="100" rx="8" fill="#F5B3C1" opacity="0.8"/>
+    <rect x="-130" y="-50" width="40" height="15" rx="3" fill="#E8A5A5"/>
+
+    <!-- Serum (center-left) -->
+    <rect x="-60" y="-35" width="45" height="90" rx="6" fill="#FFD4DD" opacity="0.8"/>
+    <circle cx="-37" cy="-45" r="4" fill="#E8A5A5"/>
+
+    <!-- Moisturizer (center-right) -->
+    <ellipse cx="40" cy="-30" rx="50" ry="18" fill="#F5D7DB" opacity="0.8"/>
+    <ellipse cx="40" cy="30" rx="50" ry="15" fill="#F0C1CC" opacity="0.8"/>
+    <rect x="15" y="-5" width="50" height="35" fill="#FCE8E3" opacity="0.6"/>
+
+    <!-- Sunscreen (right) -->
+    <rect x="130" y="-40" width="55" height="95" rx="8" fill="#F5D4D4" opacity="0.8"/>
+    <rect x="145" y="-50" width="25" height="15" rx="3" fill="#E8A5A5"/>
+    <text x="157" y="30" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#F58D96">SPF</text>
+
+    <!-- Glow effect behind -->
+    <circle cx="0" cy="0" r="150" fill="#F58D96" opacity="0.06"/>
+  </g>
+
+  <!-- Decorative botanical elements -->
+  <g opacity="0.3">
+    <path d="M 100 150 Q 120 180 100 210" stroke="#F58D96" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 700 250 Q 680 280 700 310" stroke="#F58D96" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Text -->
+  <text x="400" y="420" font-family="Playfair Display, serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#252525">Beauty That Feels Like You</text>
+  <text x="400" y="455" font-family="Poppins, sans-serif" font-size="14" text-anchor="middle" fill="#777777">Our curated collection for your daily routine</text>
+</svg>

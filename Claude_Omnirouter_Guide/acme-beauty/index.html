@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acme Beauty - Premium Skincare & Beauty Products</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✓</div>
+        <span>Acme Beauty</span>
+      </a>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" placeholder="Search products..." id="headerSearch">
+          <span style="color: var(--secondary-text);">🔍</span>
+        </div>
+
+        <div class="cart-icon-wrapper" onclick="window.location.href='cart.html'">
+          <span class="cart-icon">🛍️</span>
+          <div class="cart-count">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section" style="background-color: var(--white);">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: var(--spacing-2xl);">
+        <!-- Hero Left -->
+        <div>
+          <h1 style="margin-bottom: var(--spacing-lg); line-height: 1.2;">
+            Explore the new beauty trends for this season
+          </h1>
+          <p style="font-size: 1.05rem; margin-bottom: var(--spacing-xl); color: var(--secondary-text);">
+            We believe that beauty and healthy skin begin with the right products. Discover carefully selected skincare essentials designed to bring out your natural glow.
+          </p>
+          <div style="margin-bottom: var(--spacing-lg);">
+            <a href="shop.html" class="btn btn-primary">Shop Now</a>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--secondary-text);">
+            ✓ Trusted by beauty lovers everywhere
+          </p>
+        </div>
+
+        <!-- Hero Right - Image -->
+        <div style="text-align: center;">
+          <div style="width: 100%; border-radius: var(--radius-lg); overflow: hidden; background: linear-gradient(135deg, var(--soft-pink), var(--very-light-pink)); min-height: 400px; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/images/hero-beauty.svg" alt="Beautiful woman with natural skin" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML = '<div style=\"padding: var(--spacing-lg); text-align: center; color: var(--secondary-text);\"><div style=\"font-size: 3rem; margin-bottom: var(--spacing-md);\">✨</div><p>Premium Beauty Editorial Image</p></div>'">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted Brands Strip -->
+  <section style="background-color: var(--very-light-pink); padding: var(--spacing-xl) var(--spacing-lg); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="grid grid-4" style="align-items: center; text-align: center;">
+        <div style="color: var(--secondary-text); font-weight: 500; font-size: 0.95rem;">Dove</div>
+        <div style="color: var(--secondary-text); font-weight: 500; font-size: 0.95rem;">Clinique</div>
+        <div style="color: var(--secondary-text); font-weight: 500; font-size: 0.95rem;">NIVEA</div>
+        <div style="color: var(--secondary-text); font-weight: 500; font-size: 0.95rem;">Acme Beauty</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beauty Benefits Section -->
+  <section class="section section-pink">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--spacing-2xl);">
+        <h2 style="margin-bottom: var(--spacing-md);">We added superfoods to boost benefits</h2>
+        <p style="max-width: 600px; margin: 0 auto; font-size: 1.05rem;">
+          Discover thoughtfully selected beauty essentials enriched with skin-loving ingredients to make your daily routine feel special.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Card 1 -->
+        <div style="background-color: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+          <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🍵</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);">Matcha Green Tea</h3>
+          <p style="font-size: 0.95rem;">Refreshing skincare essential. Helps your skincare routine feel fresh and revitalizing.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="background-color: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+          <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🍫</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);">Cacao Superfood</h3>
+          <p style="font-size: 0.95rem;">A nourishing beauty-inspired ingredient. Adds a comforting, antioxidant-inspired touch to your self-care routine.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div style="background-color: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+          <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🌿</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);">Horsetail Herbal</h3>
+          <p style="font-size: 0.95rem;">Botanical-inspired skincare. Complements a gentle and mindful beauty routine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotional Banner -->
+  <section style="background-color: var(--primary-pink); padding: var(--spacing-2xl) var(--spacing-lg); color: var(--white); text-align: center;">
+    <div class="container">
+      <h2 style="color: var(--white); margin-bottom: var(--spacing-lg);">Supported By Science, Driven By Results</h2>
+      <div class="grid grid-3" style="text-align: center;">
+        <div>
+          <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: var(--spacing-sm);">30+</div>
+          <p style="color: var(--white); margin: 0;">Products</p>
+        </div>
+        <div>
+          <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: var(--spacing-sm);">300+</div>
+          <p style="color: var(--white); margin: 0;">Happy Customers</p>
+        </div>
+        <div>
+          <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: var(--spacing-sm);">18</div>
+          <p style="color: var(--white); margin: 0;">Beauty Essentials</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--spacing-2xl);">
+        <h2 style="margin-bottom: var(--spacing-sm);">Our Beauty Essentials</h2>
+        <p style="font-size: 1.05rem; color: var(--secondary-text);">Discover the little luxuries your daily routine deserves.</p>
+      </div>
+
+      <div class="grid grid-4" id="featuredProducts" style="margin-bottom: var(--spacing-2xl);">
+        <!-- Products will be loaded here by JavaScript -->
+      </div>
+
+      <div style="text-align: center;">
+        <a href="shop.html" class="btn btn-secondary">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Story Section -->
+  <section class="section" style="background-color: var(--very-light-pink);">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: var(--spacing-2xl);">
+        <!-- Image -->
+        <div style="order: 2;">
+          <div style="width: 100%; border-radius: var(--radius-lg); overflow: hidden; background: linear-gradient(135deg, var(--soft-pink), var(--very-light-pink)); min-height: 350px; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/images/brand-story.svg" alt="Beauty brand story image" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML = '<div style=\"padding: var(--spacing-lg); text-align: center; color: var(--secondary-text);\"><div style=\"font-size: 3rem; margin-bottom: var(--spacing-md);\">💆</div><p>Brand Story Image</p></div>'">
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div style="order: 1;">
+          <h2 style="margin-bottom: var(--spacing-lg);">Beauty That Feels Like You</h2>
+          <p style="font-size: 1.05rem; margin-bottom: var(--spacing-lg);">
+            At Acme Beauty, we believe skincare should feel simple, thoughtful, and personal. Our curated collection brings together everyday essentials for moments of self-care.
+          </p>
+          <a href="about.html" class="btn btn-primary">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section section-very-light">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--spacing-2xl);">
+        <h2>Client Testimonials</h2>
+        <p style="font-size: 0.9rem; color: var(--secondary-text);">Sample demo content</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Testimonial 1 -->
+        <div style="background-color: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <div style="color: var(--primary-pink); margin-bottom: var(--spacing-md); font-size: 1.2rem;">★★★★★</div>
+          <p style="margin-bottom: var(--spacing-md); font-style: italic;">
+            "My daily skincare routine feels more enjoyable than ever."
+          </p>
+          <div style="font-weight: 600; color: var(--primary-text);">Sarah M.</div>
+          <p style="font-size: 0.85rem; color: var(--secondary-text); margin: 0;">Verified Customer</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div style="background-color: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <div style="color: var(--primary-pink); margin-bottom: var(--spacing-md); font-size: 1.2rem;">★★★★★</div>
+          <p style="margin-bottom: var(--spacing-md); font-style: italic;">
+            "Beautiful products and a clean, easy shopping experience."
+          </p>
+          <div style="font-weight: 600; color: var(--primary-text);">Emma L.</div>
+          <p style="font-size: 0.85rem; color: var(--secondary-text); margin: 0;">Verified Customer</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div style="background-color: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <div style="color: var(--primary-pink); margin-bottom: var(--spacing-md); font-size: 1.2rem;">★★★★★</div>
+          <p style="margin-bottom: var(--spacing-md); font-style: italic;">
+            "I love how simple it is to find products for my routine."
+          </p>
+          <div style="font-weight: 600; color: var(--primary-text);">Jessica K.</div>
+          <p style="font-size: 0.85rem; color: var(--secondary-text); margin: 0;">Verified Customer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section section-pink">
+    <div class="container">
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <h2 style="margin-bottom: var(--spacing-md);">A Little Beauty in Your Inbox</h2>
+        <p style="margin-bottom: var(--spacing-lg); font-size: 1.05rem;">
+          Subscribe for beauty tips, new arrivals, and exclusive offers.
+        </p>
+
+        <form id="newsletterForm" style="display: grid; grid-template-columns: 1fr auto; gap: var(--spacing-md);">
+          <input type="email" placeholder="Enter your email" required style="border-radius: var(--radius-lg);">
+          <button type="submit" class="btn btn-primary" style="white-space: nowrap;">Subscribe</button>
+        </form>
+
+        <p id="newsletterMessage" style="margin-top: var(--spacing-md); font-size: 0.9rem; display: none;"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+            <div class="logo-icon">✓</div>
+            <span>Acme Beauty</span>
+          </a>
+          <p>Premium skincare and beauty essentials for everyday self-care.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div class="footer-links">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Shipping Info</a></li>
+            <li><a href="contact.html">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h4 style="margin-bottom: var(--spacing-md);">Follow Us</h4>
+          <div class="social-icons">
+            <div class="social-icon">f</div>
+            <div class="social-icon">𝕏</div>
+            <div class="social-icon">📷</div>
+            <div class="social-icon">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <p>&copy; 2026 Acme Beauty. All rights reserved. This is a demo website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

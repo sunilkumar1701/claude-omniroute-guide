@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Placed - Acme Beauty</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✓</div>
+        <span>Acme Beauty</span>
+      </a>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" placeholder="Search products..." id="headerSearch">
+          <span style="color: var(--secondary-text);">🔍</span>
+        </div>
+
+        <div class="cart-icon-wrapper" onclick="window.location.href='cart.html'">
+          <span class="cart-icon">🛍️</span>
+          <div class="cart-count">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Confirmation Content -->
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <!-- Success Icon -->
+      <div style="margin-bottom: var(--spacing-xl);">
+        <div style="font-size: 4rem; margin-bottom: var(--spacing-lg);">✓</div>
+        <h1 style="color: var(--primary-pink); margin-bottom: var(--spacing-md);">Your Order Has Been Placed!</h1>
+        <p style="font-size: 1.05rem; color: var(--secondary-text); max-width: 600px; margin: 0 auto;">
+          Thank you for choosing Acme Beauty. Your demo order has been recorded for this browsing session.
+        </p>
+      </div>
+
+      <!-- Demo Notice -->
+      <div style="background-color: #FFF3CD; border: 1px solid #FFE082; border-radius: var(--radius-lg); padding: var(--spacing-lg); margin-bottom: var(--spacing-2xl); max-width: 600px; margin-left: auto; margin-right: auto;">
+        <p style="color: #856404; margin: 0; font-weight: 600;">⚠️ Demo Notice</p>
+        <p style="color: #856404; margin: var(--spacing-sm) 0 0 0; font-size: 0.9rem;">This is a demonstration website. No real payment has been collected and no physical products will be shipped.</p>
+      </div>
+
+      <!-- Order Details -->
+      <div class="grid grid-2" style="gap: var(--spacing-2xl); margin-bottom: var(--spacing-2xl);">
+        <!-- Left: Order Info -->
+        <div style="text-align: left; background-color: var(--very-light-pink); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <h3 style="margin-bottom: var(--spacing-lg); text-align: center;">Order Information</h3>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0;">Order Reference</p>
+            <p id="orderReference" style="font-size: 1.25rem; font-weight: 700; color: var(--primary-text); margin: var(--spacing-xs) 0 0 0; font-family: monospace;">ACM-0000000000</p>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0;">Order Date</p>
+            <p id="orderDate" style="font-size: 1rem; color: var(--primary-text); margin: var(--spacing-xs) 0 0 0;">Today</p>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0;">Customer Name</p>
+            <p id="customerName" style="font-size: 1rem; color: var(--primary-text); margin: var(--spacing-xs) 0 0 0;">John Doe</p>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0;">Payment Method</p>
+            <p id="paymentMethod" style="font-size: 1rem; color: var(--primary-text); margin: var(--spacing-xs) 0 0 0;">Cash on Delivery</p>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0;">Delivery Address</p>
+            <p id="deliveryAddress" style="font-size: 0.95rem; color: var(--primary-text); margin: var(--spacing-xs) 0 0 0; line-height: 1.6;">Address will be displayed here</p>
+          </div>
+        </div>
+
+        <!-- Right: Total -->
+        <div style="background-color: var(--soft-pink); padding: var(--spacing-xl); border-radius: var(--radius-lg); border: 2px solid var(--primary-pink); display: flex; flex-direction: column; justify-content: center;">
+          <p style="color: var(--secondary-text); margin: 0 0 var(--spacing-md) 0; text-align: center;">Total Order Amount</p>
+          <div style="font-size: 3rem; font-weight: 700; color: var(--primary-pink); text-align: center; margin-bottom: var(--spacing-lg);">
+            ₹<span id="totalAmount">0</span>
+          </div>
+          <p style="color: var(--secondary-text); margin: 0; text-align: center; font-size: 0.9rem;">Status: <span style="color: var(--primary-pink); font-weight: 600;">Demo Order</span></p>
+        </div>
+      </div>
+
+      <!-- Order Items -->
+      <div style="background-color: var(--white); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: var(--spacing-lg); margin-bottom: var(--spacing-2xl); text-align: left;">
+        <h3 style="text-align: center; margin-bottom: var(--spacing-lg);">Items Ordered</h3>
+        <div id="orderItems">
+          <!-- Items will be rendered here -->
+        </div>
+      </div>
+
+      <!-- Price Breakdown -->
+      <div style="background-color: var(--very-light-pink); border-radius: var(--radius-lg); padding: var(--spacing-lg); margin-bottom: var(--spacing-2xl); max-width: 500px; margin-left: auto; margin-right: auto;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm); padding-bottom: var(--spacing-sm); border-bottom: 1px solid var(--border-color);">
+          <span>Subtotal</span>
+          <span>₹<span id="breakdownSubtotal">0</span></span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm); padding-bottom: var(--spacing-sm); border-bottom: 1px solid var(--border-color);">
+          <span>Shipping</span>
+          <span>₹<span id="breakdownShipping">0</span></span>
+        </div>
+        <div id="breakdownDiscountRow" style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm); padding-bottom: var(--spacing-sm); border-bottom: 1px solid var(--border-color); color: var(--primary-pink); font-weight: 600; display: none;">
+          <span>Discount</span>
+          <span>-₹<span id="breakdownDiscount">0</span></span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding-top: var(--spacing-sm);">
+          <span style="font-weight: 700; font-size: 1.1rem;">Total</span>
+          <span style="font-weight: 700; font-size: 1.1rem; color: var(--primary-pink);">₹<span id="breakdownTotal">0</span></span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-lg); max-width: 900px; margin: 0 auto;">
+        <a href="shop.html" class="btn btn-primary" style="text-decoration: none; text-align: center;">Continue Shopping</a>
+        <a href="index.html" class="btn btn-secondary" style="text-decoration: none; text-align: center;">Back to Home</a>
+        <button class="btn btn-outline" onclick="scrollToDetails()">View Details</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+            <div class="logo-icon">✓</div>
+            <span>Acme Beauty</span>
+          </a>
+          <p>Premium skincare and beauty essentials for everyday self-care.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Shipping Info</a></li>
+            <li><a href="contact.html">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: var(--spacing-md);">Follow Us</h4>
+          <div class="social-icons">
+            <div class="social-icon">f</div>
+            <div class="social-icon">𝕏</div>
+            <div class="social-icon">📷</div>
+            <div class="social-icon">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <p>&copy; 2026 Acme Beauty. All rights reserved. This is a demo website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/order-placed.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Acme Beauty</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✓</div>
+        <span>Acme Beauty</span>
+      </a>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" placeholder="Search products..." id="headerSearch">
+          <span style="color: var(--secondary-text);">🔍</span>
+        </div>
+
+        <div class="cart-icon-wrapper" onclick="window.location.href='cart.html'">
+          <span class="cart-icon">🛍️</span>
+          <div class="cart-count">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div style="background-color: var(--very-light-pink); padding: var(--spacing-md) var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <a href="shop.html" style="color: var(--secondary-text);">Shop</a>
+      <span style="color: var(--secondary-text);">/</span>
+      <span id="breadcrumbProduct" style="color: var(--primary-text);">Product</span>
+    </div>
+  </div>
+
+  <!-- Product Details -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="gap: var(--spacing-2xl);">
+        <!-- Image -->
+        <div>
+          <div id="productImageContainer" style="width: 100%; border-radius: var(--radius-lg); overflow: hidden; background: linear-gradient(135deg, var(--soft-pink), var(--very-light-pink)); min-height: 500px; display: flex; align-items: center; justify-content: center;">
+            <!-- Image will be loaded here -->
+          </div>
+        </div>
+
+        <!-- Details -->
+        <div>
+          <div class="product-category" id="productCategory">Skincare</div>
+          <h1 id="productName" style="margin-bottom: var(--spacing-md);">Product Name</h1>
+
+          <div class="product-rating" style="margin-bottom: var(--spacing-lg); font-size: 1rem;">
+            <span id="productRating">★★★★★</span>
+            <span id="productReviews" style="color: var(--secondary-text);">(128 reviews)</span>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <div style="display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-md);">
+              <span class="price-current" id="productPrice" style="font-size: 1.75rem;">₹599</span>
+              <span class="price-original" id="productOriginalPrice" style="font-size: 1.25rem;">₹799</span>
+              <span style="background-color: var(--primary-pink); color: var(--white); padding: var(--spacing-xs) var(--spacing-md); border-radius: var(--radius-md); font-size: 0.85rem; font-weight: 600;" id="discountPercent">25% OFF</span>
+            </div>
+          </div>
+
+          <p id="productDescription" style="margin-bottom: var(--spacing-lg); font-size: 1.05rem;">Product description goes here.</p>
+
+          <!-- Highlights -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <h4 style="margin-bottom: var(--spacing-md); font-size: 1rem;">Highlights</h4>
+            <ul id="productHighlights" style="list-style: none;">
+              <!-- Highlights will be loaded here -->
+            </ul>
+          </div>
+
+          <!-- Quantity Selector -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <label style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600;">Quantity</label>
+            <div style="display: flex; align-items: center; gap: var(--spacing-sm); width: fit-content;">
+              <button class="btn btn-outline btn-small" onclick="decreaseQuantity()">−</button>
+              <input type="number" id="quantityInput" value="1" min="1" style="width: 60px; text-align: center; border: 1px solid var(--border-color);">
+              <button class="btn btn-outline btn-small" onclick="increaseQuantity()">+</button>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+            <button class="btn btn-primary btn-block" onclick="addProductToCart()">Add to Cart</button>
+            <button class="btn btn-outline btn-block" onclick="buyNow()">Buy Now</button>
+          </div>
+
+          <!-- Info -->
+          <div style="background-color: var(--very-light-pink); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+            <div style="margin-bottom: var(--spacing-md);">
+              <div style="font-weight: 600; color: var(--primary-text); margin-bottom: var(--spacing-xs);">Free Shipping</div>
+              <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0;">On orders over ₹999</p>
+            </div>
+            <div style="margin-bottom: var(--spacing-md);">
+              <div style="font-weight: 600; color: var(--primary-text); margin-bottom: var(--spacing-xs);">Easy Returns</div>
+              <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0;">30-day return policy for your peace of mind</p>
+            </div>
+            <div>
+              <div style="font-weight: 600; color: var(--primary-text); margin-bottom: var(--spacing-xs);">Quality Guaranteed</div>
+              <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0;">Premium ingredients and careful selection</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="section section-very-light">
+    <div class="container">
+      <h2 style="margin-bottom: var(--spacing-2xl); text-align: center;">Related Products</h2>
+      <div class="grid grid-4" id="relatedProducts">
+        <!-- Related products will be loaded here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+            <div class="logo-icon">✓</div>
+            <span>Acme Beauty</span>
+          </a>
+          <p>Premium skincare and beauty essentials for everyday self-care.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Shipping Info</a></li>
+            <li><a href="contact.html">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: var(--spacing-md);">Follow Us</h4>
+          <div class="social-icons">
+            <div class="social-icon">f</div>
+            <div class="social-icon">𝕏</div>
+            <div class="social-icon">📷</div>
+            <div class="social-icon">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <p>&copy; 2026 Acme Beauty. All rights reserved. This is a demo website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

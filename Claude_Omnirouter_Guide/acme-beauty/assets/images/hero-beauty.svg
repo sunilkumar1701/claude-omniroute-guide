@@ -1,0 +1,46 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF7F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FCE8E3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F9E5E0;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#F58D96;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#F58D96;stop-opacity:0.02" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#heroBg)"/>
+
+  <!-- Decorative circles and shapes -->
+  <circle cx="300" cy="150" r="120" fill="url(#glow)"/>
+  <circle cx="900" cy="400" r="150" fill="url(#glow)"/>
+  <circle cx="100" cy="500" r="100" fill="#FCE8E3" opacity="0.4"/>
+  <circle cx="1100" cy="100" r="90" fill="#FCE8E3" opacity="0.35"/>
+
+  <!-- Center decorative element (face/portrait abstraction) -->
+  <circle cx="600" cy="300" r="180" fill="#F8D4DC" opacity="0.6"/>
+  <circle cx="550" cy="280" r="40" fill="white" opacity="0.4"/>
+  <circle cx="650" cy="280" r="40" fill="white" opacity="0.4"/>
+  <circle cx="600" cy="350" r="35" fill="#F58D96" opacity="0.3"/>
+
+  <!-- Glow effect -->
+  <circle cx="600" cy="300" r="190" fill="none" stroke="#F58D96" stroke-width="2" opacity="0.15"/>
+  <circle cx="600" cy="300" r="200" fill="none" stroke="#E8A5A5" stroke-width="1" opacity="0.1"/>
+
+  <!-- Beauty elements (leaves/botanical) -->
+  <g transform="translate(300, 200) rotate(-30)">
+    <path d="M 0 0 Q 20 30 0 60" stroke="#F58D96" stroke-width="3" fill="none" opacity="0.3"/>
+  </g>
+
+  <g transform="translate(900, 350) rotate(45)">
+    <path d="M 0 0 Q -20 30 0 60" stroke="#F58D96" stroke-width="3" fill="none" opacity="0.3"/>
+  </g>
+
+  <!-- Text -->
+  <text x="600" y="480" font-family="Playfair Display, serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#252525">Premium Beauty</text>
+  <text x="600" y="520" font-family="Playfair Display, serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#252525">Editorial Image</text>
+  <text x="600" y="560" font-family="Poppins, sans-serif" font-size="16" text-anchor="middle" fill="#F58D96">Acme Beauty - Skincare Excellence</text>
+</svg>

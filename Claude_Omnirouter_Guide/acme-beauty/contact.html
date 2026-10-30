@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Acme Beauty</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✓</div>
+        <span>Acme Beauty</span>
+      </a>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" placeholder="Search products..." id="headerSearch">
+          <span style="color: var(--secondary-text);">🔍</span>
+        </div>
+
+        <div class="cart-icon-wrapper" onclick="window.location.href='cart.html'">
+          <span class="cart-icon">🛍️</span>
+          <div class="cart-count">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Header -->
+  <section class="section" style="background-color: var(--very-light-pink); text-align: center;">
+    <div class="container">
+      <h1 style="margin-bottom: var(--spacing-lg);">We'd Love to Hear From You</h1>
+      <p style="font-size: 1.05rem; color: var(--secondary-text); max-width: 600px; margin: 0 auto;">
+        Questions about our beauty collection? Send us a message.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="gap: var(--spacing-2xl); margin-bottom: var(--spacing-2xl);">
+        <!-- Contact Info -->
+        <div>
+          <h2 style="margin-bottom: var(--spacing-lg);">Get in Touch</h2>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <p style="color: var(--secondary-text); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">Demo Contact Information</p>
+            <div style="background-color: var(--very-light-pink); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--primary-pink);">
+              <div style="margin-bottom: var(--spacing-md);">
+                <p style="font-weight: 600; margin: 0 0 var(--spacing-xs) 0;">Email</p>
+                <p style="color: var(--secondary-text); margin: 0;">hello@acmebeauty.example</p>
+              </div>
+              <div style="margin-bottom: var(--spacing-md);">
+                <p style="font-weight: 600; margin: 0 0 var(--spacing-xs) 0;">Phone</p>
+                <p style="color: var(--secondary-text); margin: 0;">+91 90000 00000</p>
+              </div>
+              <div>
+                <p style="font-weight: 600; margin: 0 0 var(--spacing-xs) 0;">Address</p>
+                <p style="color: var(--secondary-text); margin: 0;">Chennai, Tamil Nadu, India</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Section -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <h3 style="margin-bottom: var(--spacing-lg);">Frequently Asked Questions</h3>
+
+            <div class="accordion-item" style="margin-bottom: var(--spacing-md); border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden;">
+              <button class="accordion-header" style="width: 100%; padding: var(--spacing-lg); background-color: var(--very-light-pink); border: none; text-align: left; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleAccordion(this)">
+                <span>What is your shipping policy?</span>
+                <span>+</span>
+              </button>
+              <div class="accordion-content" style="display: none; padding: var(--spacing-lg); background-color: var(--white); border-top: 1px solid var(--border-color); color: var(--secondary-text);">
+                <p>We offer free shipping on orders over ₹999 and a standard shipping charge of ₹49 for orders below ₹999. Most orders arrive within 5-7 business days.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item" style="margin-bottom: var(--spacing-md); border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden;">
+              <button class="accordion-header" style="width: 100%; padding: var(--spacing-lg); background-color: var(--very-light-pink); border: none; text-align: left; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleAccordion(this)">
+                <span>What is your returns policy?</span>
+                <span>+</span>
+              </button>
+              <div class="accordion-content" style="display: none; padding: var(--spacing-lg); background-color: var(--white); border-top: 1px solid var(--border-color); color: var(--secondary-text);">
+                <p>We offer a 30-day returns policy. If you're not satisfied with your purchase, you can return unopened products in original packaging for a full refund.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item" style="margin-bottom: var(--spacing-md); border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden;">
+              <button class="accordion-header" style="width: 100%; padding: var(--spacing-lg); background-color: var(--very-light-pink); border: none; text-align: left; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleAccordion(this)">
+                <span>Are your products suitable for all skin types?</span>
+                <span>+</span>
+              </button>
+              <div class="accordion-content" style="display: none; padding: var(--spacing-lg); background-color: var(--white); border-top: 1px solid var(--border-color); color: var(--secondary-text);">
+                <p>Most of our products are formulated for all skin types. However, we recommend reviewing individual product descriptions to find items best suited for your specific needs.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item" style="margin-bottom: var(--spacing-md); border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden;">
+              <button class="accordion-header" style="width: 100%; padding: var(--spacing-lg); background-color: var(--very-light-pink); border: none; text-align: left; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleAccordion(this)">
+                <span>How do I apply a promo code?</span>
+                <span>+</span>
+              </button>
+              <div class="accordion-content" style="display: none; padding: var(--spacing-lg); background-color: var(--white); border-top: 1px solid var(--border-color); color: var(--secondary-text);">
+                <p>You can apply promo codes at the cart page. We currently offer BEAUTY10 (10% discount) and GLOW15 (15% discount) for demo purposes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <h2 style="margin-bottom: var(--spacing-lg);">Send us a Message</h2>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Full Name *</label>
+              <input type="text" id="contactName" required>
+              <div class="form-error" id="contactNameError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Email Address *</label>
+              <input type="email" id="contactEmail" required>
+              <div class="form-error" id="contactEmailError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Subject *</label>
+              <input type="text" id="contactSubject" required>
+              <div class="form-error" id="contactSubjectError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Message *</label>
+              <textarea id="contactMessage" required></textarea>
+              <div class="form-error" id="contactMessageError"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="margin-bottom: var(--spacing-md);">Send Message</button>
+          </form>
+
+          <div id="contactMessage" style="margin-top: var(--spacing-lg); padding: var(--spacing-lg); border-radius: var(--radius-lg); background-color: #F3E5F5; border: 1px solid #CE93D8; display: none; text-align: center;">
+            <p style="color: #6A1B9A; margin: 0; font-weight: 600;">✓ Thank you for reaching out!</p>
+            <p style="color: #6A1B9A; font-size: 0.9rem; margin: var(--spacing-sm) 0 0 0;">Your demo message has been submitted successfully.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+            <div class="logo-icon">✓</div>
+            <span>Acme Beauty</span>
+          </a>
+          <p>Premium skincare and beauty essentials for everyday self-care.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Shipping Info</a></li>
+            <li><a href="contact.html">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: var(--spacing-md);">Follow Us</h4>
+          <div class="social-icons">
+            <div class="social-icon">f</div>
+            <div class="social-icon">𝕏</div>
+            <div class="social-icon">📷</div>
+            <div class="social-icon">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <p>&copy; 2026 Acme Beauty. All rights reserved. This is a demo website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

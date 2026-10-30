@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Acme Beauty</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✓</div>
+        <span>Acme Beauty</span>
+      </a>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" placeholder="Search products..." id="headerSearch">
+          <span style="color: var(--secondary-text);">🔍</span>
+        </div>
+
+        <div class="cart-icon-wrapper" onclick="window.location.href='cart.html'">
+          <span class="cart-icon">🛍️</span>
+          <div class="cart-count">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Checkout Header -->
+  <section class="section" style="background-color: var(--very-light-pink); text-align: center;">
+    <div class="container">
+      <h1 style="margin-bottom: var(--spacing-md);">Checkout</h1>
+      <p style="color: var(--secondary-text);">Complete your order</p>
+    </div>
+  </section>
+
+  <!-- Checkout Content -->
+  <section class="section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: 1fr 350px; gap: var(--spacing-2xl);">
+        <!-- Checkout Form -->
+        <div>
+          <form id="checkoutForm">
+            <!-- Demo Warning -->
+            <div style="background-color: #FFF3CD; border: 1px solid #FFE082; border-radius: var(--radius-lg); padding: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+              <p style="color: #856404; margin: 0; font-weight: 600;;">⚠️ Demo Checkout</p>
+              <p style="color: #856404; margin: var(--spacing-sm) 0 0 0; font-size: 0.9rem;">This is a demonstration website. No real payment will be processed.</p>
+            </div>
+
+            <!-- Customer Information -->
+            <div style="margin-bottom: var(--spacing-2xl);">
+              <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-lg);">Customer Information</h3>
+
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" required>
+                <div class="form-error" id="fullNameError"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" required>
+                <div class="form-error" id="emailError"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="mobile">Mobile Number *</label>
+                <input type="tel" id="mobile" placeholder="10-digit number" required>
+                <div class="form-error" id="mobileError"></div>
+              </div>
+            </div>
+
+            <!-- Delivery Information -->
+            <div style="margin-bottom: var(--spacing-2xl);">
+              <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-lg);">Delivery Address</h3>
+
+              <div class="form-group">
+                <label for="address1">Address Line 1 *</label>
+                <input type="text" id="address1" required>
+                <div class="form-error" id="address1Error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="address2">Address Line 2 (Optional)</label>
+                <input type="text" id="address2">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">City *</label>
+                  <input type="text" id="city" required>
+                  <div class="form-error" id="cityError"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="state">State *</label>
+                  <input type="text" id="state" required>
+                  <div class="form-error" id="stateError"></div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="pinCode">PIN Code *</label>
+                  <input type="text" id="pinCode" placeholder="6-digit PIN" required>
+                  <div class="form-error" id="pinCodeError"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="country">Country</label>
+                  <input type="text" id="country" value="India" readonly style="background-color: var(--light-gray);">
+                </div>
+              </div>
+            </div>
+
+            <!-- Delivery Options -->
+            <div style="margin-bottom: var(--spacing-2xl);">
+              <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-lg);">Delivery</h3>
+
+              <div style="background-color: var(--very-light-pink); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 2px solid var(--border-color);">
+                <label style="display: flex; align-items: center; gap: var(--spacing-md); cursor: pointer; font-weight: 500;">
+                  <input type="radio" name="delivery" value="standard" checked>
+                  <div>
+                    <div style="font-weight: 600; color: var(--primary-text);">Standard Delivery</div>
+                    <p style="font-size: 0.9rem; color: var(--secondary-text); margin: var(--spacing-xs) 0 0 0;">Estimated delivery: 5-7 business days</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div style="margin-bottom: var(--spacing-2xl);">
+              <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-lg);">Payment Method</h3>
+
+              <div style="background-color: #F3E5F5; border: 1px solid #CE93D8; border-radius: var(--radius-lg); padding: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                <p style="color: #6A1B9A; margin: 0; font-size: 0.9rem;"><strong>Demo Mode:</strong> No real payment will be processed. Select any payment method to continue.</p>
+              </div>
+
+              <div style="display: grid; gap: var(--spacing-md);">
+                <label style="display: flex; align-items: center; gap: var(--spacing-md); cursor: pointer; padding: var(--spacing-lg); border: 2px solid var(--border-color); border-radius: var(--radius-lg); transition: all 0.3s ease;">
+                  <input type="radio" name="paymentMethod" value="cod" checked>
+                  <div>
+                    <div style="font-weight: 600; color: var(--primary-text);">Cash on Delivery</div>
+                    <p style="font-size: 0.9rem; color: var(--secondary-text); margin: var(--spacing-xs) 0 0 0;">Pay when you receive your order</p>
+                  </div>
+                </label>
+
+                <label style="display: flex; align-items: center; gap: var(--spacing-md); cursor: pointer; padding: var(--spacing-lg); border: 2px solid var(--border-color); border-radius: var(--radius-lg); transition: all 0.3s ease;">
+                  <input type="radio" name="paymentMethod" value="upi">
+                  <div>
+                    <div style="font-weight: 600; color: var(--primary-text);">UPI (Demo)</div>
+                    <p style="font-size: 0.9rem; color: var(--secondary-text); margin: var(--spacing-xs) 0 0 0;">Unified Payments Interface - Demo mode only</p>
+                  </div>
+                </label>
+
+                <label style="display: flex; align-items: center; gap: var(--spacing-md); cursor: pointer; padding: var(--spacing-lg); border: 2px solid var(--border-color); border-radius: var(--radius-lg); transition: all 0.3s ease;">
+                  <input type="radio" name="paymentMethod" value="card">
+                  <div>
+                    <div style="font-weight: 600; color: var(--primary-text);">Credit / Debit Card (Demo)</div>
+                    <p style="font-size: 0.9rem; color: var(--secondary-text); margin: var(--spacing-xs) 0 0 0;">Demo mode only - No real card details collected</p>
+                  </div>
+                </label>
+              </div>
+
+              <div class="form-error" id="paymentMethodError"></div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <div style="background-color: var(--very-light-pink); padding: var(--spacing-lg); border-radius: var(--radius-lg); height: fit-content; position: sticky; top: 120px;">
+          <h4 style="margin-bottom: var(--spacing-lg); font-size: 1.1rem;">Order Summary</h4>
+
+          <div id="orderItems" style="margin-bottom: var(--spacing-lg); max-height: 300px; overflow-y: auto;">
+            <!-- Items will be rendered here -->
+          </div>
+
+          <div style="border-top: 1px solid var(--border-color); padding-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm); color: var(--secondary-text); font-size: 0.9rem;">
+              <span>Subtotal</span>
+              <span>₹<span id="summarySubtotal">0</span></span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm); color: var(--secondary-text); font-size: 0.9rem;">
+              <span>Shipping</span>
+              <span>₹<span id="summaryShipping">0</span></span>
+            </div>
+            <div id="summaryDiscountRow" style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm); color: var(--primary-pink); font-weight: 600; font-size: 0.9rem; display: none;">
+              <span>Discount</span>
+              <span>-₹<span id="summaryDiscount">0</span></span>
+            </div>
+          </div>
+
+          <div style="background-color: var(--white); padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-lg);">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 600; color: var(--primary-text);">Total</span>
+              <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary-pink);">₹<span id="summaryTotal">0</span></span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-block" onclick="placeOrder()" style="margin-bottom: var(--spacing-md);">Place Order</button>
+          <a href="cart.html" class="btn btn-outline btn-block" style="text-decoration: none; text-align: center;">Back to Cart</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+            <div class="logo-icon">✓</div>
+            <span>Acme Beauty</span>
+          </a>
+          <p>Premium skincare and beauty essentials for everyday self-care.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Shipping Info</a></li>
+            <li><a href="contact.html">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: var(--spacing-md);">Follow Us</h4>
+          <div class="social-icons">
+            <div class="social-icon">f</div>
+            <div class="social-icon">𝕏</div>
+            <div class="social-icon">📷</div>
+            <div class="social-icon">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <p>&copy; 2026 Acme Beauty. All rights reserved. This is a demo website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

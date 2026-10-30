@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Acme Beauty</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✓</div>
+        <span>Acme Beauty</span>
+      </a>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" placeholder="Search products..." id="headerSearch">
+          <span style="color: var(--secondary-text);">🔍</span>
+        </div>
+
+        <div class="cart-icon-wrapper" onclick="window.location.href='cart.html'">
+          <span class="cart-icon">🛍️</span>
+          <div class="cart-count">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Shop Header -->
+  <section class="section" style="background-color: var(--very-light-pink); text-align: center;">
+    <div class="container">
+      <h1 style="margin-bottom: var(--spacing-md);">Shop Our Beauty Collection</h1>
+      <p style="font-size: 1.05rem; color: var(--secondary-text); max-width: 600px; margin: 0 auto;">Find your next skincare favorite.</p>
+    </div>
+  </section>
+
+  <!-- Shop Content -->
+  <section class="section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: 250px 1fr; gap: var(--spacing-lg);">
+        <!-- Sidebar Filters -->
+        <div>
+          <div style="background-color: var(--very-light-pink); padding: var(--spacing-lg); border-radius: var(--radius-lg); position: sticky; top: 100px;">
+            <!-- Search -->
+            <div style="margin-bottom: var(--spacing-lg);">
+              <h4 style="margin-bottom: var(--spacing-md); font-size: 1rem;">Search</h4>
+              <input type="text" placeholder="Search products..." id="searchInput" style="margin-bottom: var(--spacing-sm);">
+            </div>
+
+            <!-- Category Filter -->
+            <div style="margin-bottom: var(--spacing-lg);">
+              <h4 style="margin-bottom: var(--spacing-md); font-size: 1rem;">Category</h4>
+              <div id="categoryFilter" style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+                <!-- Categories will be loaded here -->
+              </div>
+            </div>
+
+            <!-- Sort -->
+            <div>
+              <h4 style="margin-bottom: var(--spacing-md); font-size: 1rem;">Sort By</h4>
+              <select id="sortSelect" style="margin-bottom: var(--spacing-sm);">
+                <option value="featured">Featured</option>
+                <option value="price-low-to-high">Price: Low to High</option>
+                <option value="price-high-to-low">Price: High to Low</option>
+                <option value="alphabetical">Alphabetical</option>
+                <option value="rating">Top Rated</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-lg);">
+            <p style="color: var(--secondary-text); margin: 0;">Showing <span id="productCount">0</span> products</p>
+            <button class="btn btn-secondary btn-small" onclick="clearFilters()" style="display: none;" id="clearBtn">Clear Filters</button>
+          </div>
+
+          <div class="grid grid-4" id="productsGrid">
+            <!-- Products will be loaded here -->
+          </div>
+
+          <div id="emptyState" style="text-align: center; padding: var(--spacing-2xl); display: none;">
+            <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🔍</div>
+            <h3>No products found</h3>
+            <p style="color: var(--secondary-text);">Try adjusting your filters or search terms.</p>
+            <button class="btn btn-primary" onclick="clearFilters()">Clear Filters</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+            <div class="logo-icon">✓</div>
+            <span>Acme Beauty</span>
+          </a>
+          <p>Premium skincare and beauty essentials for everyday self-care.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Shipping Info</a></li>
+            <li><a href="contact.html">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: var(--spacing-md);">Follow Us</h4>
+          <div class="social-icons">
+            <div class="social-icon">f</div>
+            <div class="social-icon">𝕏</div>
+            <div class="social-icon">📷</div>
+            <div class="social-icon">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <p>&copy; 2026 Acme Beauty. All rights reserved. This is a demo website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

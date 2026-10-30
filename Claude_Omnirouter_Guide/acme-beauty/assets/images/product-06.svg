@@ -1,0 +1,22 @@
+<svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#F9E5E0"/><stop offset="100%" style="stop-color:#FFF7F6"/></linearGradient></defs>
+  <rect width="400" height="500" fill="url(#bg6)"/>
+  <circle cx="200" cy="100" r="80" fill="#FCE8E3" opacity="0.6"/>
+
+  <!-- Eye cream tube -->
+  <rect x="155" y="140" width="90" height="120" rx="15" fill="#F5B3C1"/>
+  <rect x="170" y="125" width="60" height="22" rx="8" fill="#E8A5A5"/>
+  <circle cx="200" cy="118" r="5" fill="#D68B99"/>
+
+  <!-- Cream texture -->
+  <ellipse cx="200" cy="155" rx="40" ry="10" fill="#FCE8E3" opacity="0.7"/>
+  <ellipse cx="200" cy="175" rx="38" ry="8" fill="white" opacity="0.25"/>
+
+  <!-- Eye cream highlight -->
+  <rect x="165" y="160" width="15" height="60" rx="7" fill="white" opacity="0.3"/>
+
+  <text x="200" y="300" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#252525">Peptide</text>
+  <text x="200" y="325" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#252525">Eye Cream</text>
+  <text x="200" y="385" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#F58D96" font-weight="bold">Eye Care</text>
+  <text x="200" y="455" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#F58D96">★★★★☆</text>
+</svg>

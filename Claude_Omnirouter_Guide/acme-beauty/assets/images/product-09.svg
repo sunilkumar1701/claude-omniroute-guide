@@ -1,0 +1,24 @@
+<svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="bg9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#F9E5E0"/><stop offset="100%" style="stop-color:#FFF7F6"/></linearGradient></defs>
+  <rect width="400" height="500" fill="url(#bg9)"/>
+  <circle cx="200" cy="120" r="75" fill="#FCE8E3" opacity="0.6"/>
+
+  <!-- Lip balm stick -->
+  <g transform="translate(200, 180)">
+    <rect x="-25" y="-40" width="50" height="80" rx="25" fill="#F5B3C1"/>
+    <ellipse cx="0" cy="40" rx="25" ry="12" fill="#E8A5A5"/>
+    <ellipse cx="0" cy="-38" rx="22" ry="8" fill="#FFD4DD" opacity="0.8"/>
+
+    <!-- Shine -->
+    <rect x="-12" y="-35" width="8" height="60" rx="4" fill="white" opacity="0.3"/>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="80" cy="250" r="50" fill="#FCE8E3" opacity="0.4"/>
+  <circle cx="320" cy="350" r="60" fill="#FCE8E3" opacity="0.35"/>
+
+  <text x="200" y="310" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#252525">Nourishing</text>
+  <text x="200" y="335" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#252525">Lip Balm</text>
+  <text x="200" y="390" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#F58D96" font-weight="bold">Lip Care</text>
+  <text x="200" y="455" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#F58D96">★★★★☆</text>
+</svg>

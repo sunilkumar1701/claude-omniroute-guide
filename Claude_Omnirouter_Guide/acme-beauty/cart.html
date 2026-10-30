@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Acme Beauty</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✓</div>
+        <span>Acme Beauty</span>
+      </a>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" placeholder="Search products..." id="headerSearch">
+          <span style="color: var(--secondary-text);">🔍</span>
+        </div>
+
+        <div class="cart-icon-wrapper" onclick="window.location.href='cart.html'">
+          <span class="cart-icon">🛍️</span>
+          <div class="cart-count">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Header -->
+  <section class="section" style="background-color: var(--very-light-pink); text-align: center;">
+    <div class="container">
+      <h1 style="margin-bottom: var(--spacing-md);">Shopping Cart</h1>
+      <p style="color: var(--secondary-text);">Review your items before checkout</p>
+    </div>
+  </section>
+
+  <!-- Cart Content -->
+  <section class="section">
+    <div class="container">
+      <!-- Empty Cart State -->
+      <div id="emptyCart" style="text-align: center; padding: var(--spacing-2xl);">
+        <div style="font-size: 4rem; margin-bottom: var(--spacing-lg);">🛍️</div>
+        <h2 style="margin-bottom: var(--spacing-md);">Your cart is empty</h2>
+        <p style="color: var(--secondary-text); margin-bottom: var(--spacing-lg);">Start shopping to add items to your cart.</p>
+        <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+      </div>
+
+      <!-- Cart Items -->
+      <div id="cartContent" style="display: none;">
+        <div class="grid" style="grid-template-columns: 1fr 350px; gap: var(--spacing-2xl);">
+          <!-- Cart Items List -->
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-lg);">
+              <h3 style="margin: 0;">Cart Items</h3>
+              <button class="btn btn-outline btn-small" onclick="if(confirm('Clear all items?')) clearCart(); location.reload();">Clear Cart</button>
+            </div>
+
+            <div id="cartItems">
+              <!-- Cart items will be rendered here -->
+            </div>
+          </div>
+
+          <!-- Order Summary -->
+          <div style="background-color: var(--very-light-pink); padding: var(--spacing-lg); border-radius: var(--radius-lg); height: fit-content; position: sticky; top: 120px;">
+            <h4 style="margin-bottom: var(--spacing-lg); font-size: 1.1rem;">Order Summary</h4>
+
+            <div style="margin-bottom: var(--spacing-lg);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm); color: var(--secondary-text);">
+                <span>Subtotal</span>
+                <span>₹<span id="subtotalAmount">0</span></span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm); color: var(--secondary-text);">
+                <span>Shipping</span>
+                <span>₹<span id="shippingAmount">0</span></span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-lg); color: var(--primary-pink); font-weight: 600;" id="discountRow" style="display: none;">
+                <span>Discount</span>
+                <span>-₹<span id="discountAmount">0</span></span>
+              </div>
+            </div>
+
+            <div style="border-top: 1px solid var(--border-color); padding-top: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-lg);">
+                <span style="font-weight: 600; color: var(--primary-text);">Total</span>
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary-pink);">₹<span id="totalAmount">0</span></span>
+              </div>
+            </div>
+
+            <!-- Promo Code -->
+            <div style="margin-bottom: var(--spacing-lg);">
+              <label style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600; font-size: 0.9rem;">Promo Code</label>
+              <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--spacing-sm);">
+                <input type="text" id="promoInput" placeholder="BEAUTY10 or GLOW15" style="border-radius: var(--radius-md);">
+                <button class="btn btn-secondary btn-small" onclick="applyPromo()">Apply</button>
+              </div>
+              <p id="promoMessage" style="font-size: 0.85rem; margin-top: var(--spacing-sm); display: none;"></p>
+            </div>
+
+            <button class="btn btn-primary btn-block" onclick="proceedToCheckout()" style="margin-bottom: var(--spacing-md);">Proceed to Checkout</button>
+            <a href="shop.html" class="btn btn-outline btn-block" style="text-decoration: none; text-align: center;">Continue Shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+            <div class="logo-icon">✓</div>
+            <span>Acme Beauty</span>
+          </a>
+          <p>Premium skincare and beauty essentials for everyday self-care.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Shipping Info</a></li>
+            <li><a href="contact.html">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: var(--spacing-md);">Follow Us</h4>
+          <div class="social-icons">
+            <div class="social-icon">f</div>
+            <div class="social-icon">𝕏</div>
+            <div class="social-icon">📷</div>
+            <div class="social-icon">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <p>&copy; 2026 Acme Beauty. All rights reserved. This is a demo website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
